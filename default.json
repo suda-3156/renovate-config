@@ -2,9 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "local>suda-3156/renovate-config:base",
+    "local>suda-3156/renovate-config:base.json5",
     "local>suda-3156/renovate-config:biome",
-    "local>suda-3156/renovate-config:docker",
+    "local>suda-3156/renovate-config:docker.json5",
     "local>suda-3156/renovate-config:github-actions",
     "local>suda-3156/renovate-config:go",
     "local>suda-3156/renovate-config:npm"

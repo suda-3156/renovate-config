@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>suda-3156/renovate-config",
-    "github>suda-3156/renovate-config:anytime"
+    "local>suda-3156/renovate-config",
+    "local>suda-3156/renovate-config:anytime"
   ]
 }
