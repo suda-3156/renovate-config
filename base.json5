@@ -1,0 +1,52 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    // Group various lint packages together.
+    "group:linters",
+    // Upgrade to unstable versions only if the existing version is unstable.
+    ":ignoreUnstable",
+    // Use semantic prefixes for commit messages and PR titles.
+    ":semanticCommits",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "pin": {
+    "automerge": true
+  },
+  "schedule": [
+    "after 10:00 before 23:00"
+  ],
+
+  // ["auto", "pin", "bump", "replace", "widen", "update-lockfile", "in-range-only"]
+  // "rangeStrategy": "pin",
+
+  // Dependency Dashboard
+  "dependencyDashboardLabels": ["renovate"],
+
+  // PR Settings
+  "prHourlyLimit": 5,
+  "prConcurrentLimit": 10,
+  "prCreation": "not-pending",
+  "configMigration": true,
+  "rollbackPrs": true,
+  "addLabels": ["renovate"],
+
+  // Vulnerability Alerts
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["security"]
+  },
+  "osvVulnerabilityAlerts": true,
+
+  // Update Schedule
+  "major": { "minimumReleaseAge": "7 days" },
+  "minor": { "minimumReleaseAge": "3 days" },
+  "patch": { "minimumReleaseAge": "2 days" },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      // By default, Renovate will not automerge until it sees passing status checks / check runs for the branch. 
+      // "ignoreTests": true
+    }
+  ],
+}

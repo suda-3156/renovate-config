@@ -1,0 +1,15 @@
+// https://docs.renovatebot.com/docker/
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "pinDigests": true,
+  "dockerfile": {
+    "fileMatch": [
+      // `Dockerfile-xxx`, `Dockerfile.xxx`, `dockerfile-xxx` or `dockerfile.xxx`
+      "(^|/)[Dd]ockerfile[-.][^/]*$",
+      // `xxx-Dockerfile`, `xxx.Dockerfile`, `xxx-dockerfile` or `xxx.dockerfile`
+      "(^|/)[^/]*[-.][Dd]ockerfile$",
+      // `Dockerfile` or `dockerfile`
+      "(^|/)[Dd]ockerfile$"
+    ]
+  }
+}
