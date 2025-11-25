@@ -2,12 +2,16 @@
 
 ## Usage
 
-- `.github/renovate.json5`
+- `.github/renovate.json`
 
-```json
+```json5
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>suda-3156/renovate-config"]
+  "extends": [
+    "github>suda-3156/renovate-config",
+    "github>suda-3156/renovate-config:anytime", // To run renovate at any time
+    "github>suda-3156/renovate-config:ignore-test" // To enable automerging without tests
+  ]
 }
 ```
 
