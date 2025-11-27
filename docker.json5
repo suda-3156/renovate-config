@@ -1,7 +1,7 @@
 // https://docs.renovatebot.com/docker/
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "pinDigests": true,
+  "pinDigests": false,
   "dockerfile": {
     "fileMatch": [
       // `Dockerfile-xxx`, `Dockerfile.xxx`, `dockerfile-xxx` or `dockerfile.xxx`
