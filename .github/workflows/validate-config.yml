@@ -28,6 +28,10 @@ jobs:
         run: |
           for file in *.json*
           do
+            if [[ "$file" == "package.json" || "$file" == "renovate.json" ]]; then
+              echo "Skip: $file"
+              continue
+            fi
             echo "Validate: $file"
             RENOVATE_CONFIG_FILE=${file} npx --package renovate -c 'renovate-config-validator'
           done
