@@ -9,9 +9,9 @@
     ":semanticCommits",
     ":timezone(Asia/Tokyo)"
   ],
-  "pin": {
-    "automerge": true
-  },
+  // "pin": {
+  //   "automerge": true
+  // },
   "schedule": [
     "after 10:00 before 23:00"
   ],
