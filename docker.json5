@@ -3,7 +3,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "pinDigests": false,
   "dockerfile": {
-    "fileMatch": [
+    "managerFilePatterns": [
       // `Dockerfile-xxx`, `Dockerfile.xxx`, `dockerfile-xxx` or `dockerfile.xxx`
       "(^|/)[Dd]ockerfile[-.][^/]*$",
       // `xxx-Dockerfile`, `xxx.Dockerfile`, `xxx-dockerfile` or `xxx.dockerfile`
