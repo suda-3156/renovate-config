@@ -1,0 +1,10 @@
+{
+  "name": "renovate-config",
+  "scripts": {
+    "validate": "renovate-config-validator"
+  },
+  "packageManager": "pnpm@10.23.0",
+  "devDependencies": {
+    "renovate": "^42.25.4"
+  }
+}
