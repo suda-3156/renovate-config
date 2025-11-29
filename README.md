@@ -10,7 +10,7 @@
   "extends": [
     "github>suda-3156/renovate-config",
     "github>suda-3156/renovate-config:anytime",
-    "github>suda-3156/renovate-config:ignore-test"
+    "github>suda-3156/renovate-config:ignore-test.json5"
   ]
 }
 ```
