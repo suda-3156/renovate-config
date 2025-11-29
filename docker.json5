@@ -1,6 +1,12 @@
 // https://docs.renovatebot.com/docker/
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    // https://docs.renovatebot.com/presets-docker/#dockerpindigests
+    "docker:pinDigests",
+    // `{ "pinDigests": true }` targeting Docker images and GitHub Actions.
+    // https://docs.renovatebot.com/configuration-options/#pindigests
+  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -16,15 +22,4 @@
       "datasourceTemplate": "docker"
     }
   ],
-  "packageRules": [
-    {
-      "matchDatasources": ["docker"],
-      "pinDigests": true
-    },
-    {
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["pin", "digest"],
-      "automerge": true
-    }
-  ]
 }

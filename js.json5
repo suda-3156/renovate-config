@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  // https://docs.renovatebot.com/modules/manager/npm/
+  // `npm` manager handles npm, pnpm, and yarn (all use `package.json`).
+  // Note: If a `package.json` is found to be part of bun manager results
+  //       then the same file will be excluded from the npm manager results
+  //       unless an npm/pnpm/Yarn lock file is also found.
+  //       See: https://docs.renovatebot.com/modules/manager/bun/
+  "npm": {
+    "rangeStrategy": "bump",
+    // https://docs.renovatebot.com/configuration-options/#postupdateoptions
+    "postUpdateOptions": [
+      "npmDedupe",
+      // "npmInstallTwice",
+      "pnpmDedupe",
+      // "yarnDedupeFewer",
+      // "yarnDedupeHighest"
+    ]
+  },
+  "bun": {
+    "rangeStrategy": "bump",
+    // We need to wait for official support for the `dedupe` command in Bun.
+    // https://github.com/oven-sh/bun/issues/1343
+    // "postUpdateOptions": ["bunDedupe"]
+  }
+}

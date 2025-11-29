@@ -10,7 +10,7 @@
   "extends": [
     "github>suda-3156/renovate-config",
     "github>suda-3156/renovate-config:anytime", // To run renovate at any time
-    "github>suda-3156/renovate-config:ignore-test" // To enable automerging without tests
+    "github>suda-3156/renovate-config:ignore-test" // To enable automerging for 'minor', 'patch', 'pin', 'digest' without tests
   ]
 }
 ```

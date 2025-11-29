@@ -1,12 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    // Group various lint packages together.
+    // https://docs.renovatebot.com/presets-group/#grouplinters
     "group:linters",
-    // Upgrade to unstable versions only if the existing version is unstable.
+    // https://docs.renovatebot.com/presets-default/#separatemultiplemajorreleases
+    ":separateMultipleMajorReleases",
+    // https://docs.renovatebot.com/presets-default/#ignoreunstable
     ":ignoreUnstable",
-    // Use semantic prefixes for commit messages and PR titles.
+    // https://docs.renovatebot.com/presets-default/#semanticcommits
     ":semanticCommits",
+    // https://docs.renovatebot.com/presets-default/#semanticprefixfixdepschoreothers
+    ":semanticPrefixFixDepsChoreOthers",
     ":timezone(Asia/Tokyo)"
   ],
   "schedule": [
@@ -40,7 +44,7 @@
   "patch": { "minimumReleaseAge": "2 days" },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       // By default, Renovate will not automerge until it sees passing status checks / check runs for the branch. 
       // "ignoreTests": true
