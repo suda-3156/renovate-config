@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended",
     "local>suda-3156/renovate-config:base.json5",
-    "local>suda-3156/renovate-config:biome.json5",
+    "local>suda-3156/renovate-config:biome",
     "local>suda-3156/renovate-config:docker.json5",
     "local>suda-3156/renovate-config:github-actions",
     "local>suda-3156/renovate-config:go",
