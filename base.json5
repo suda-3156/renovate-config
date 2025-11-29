@@ -9,9 +9,6 @@
     ":semanticCommits",
     ":timezone(Asia/Tokyo)"
   ],
-  "pin": {
-    "automerge": true
-  },
   "schedule": [
     "after 10:00 before 23:00"
   ],
@@ -43,7 +40,7 @@
   "patch": { "minimumReleaseAge": "2 days" },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch", "pin"],
       "automerge": true,
       // By default, Renovate will not automerge until it sees passing status checks / check runs for the branch. 
       // "ignoreTests": true
