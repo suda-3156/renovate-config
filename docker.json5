@@ -1,15 +1,30 @@
 // https://docs.renovatebot.com/docker/
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "pinDigests": false,
-  "dockerfile": {
-    "managerFilePatterns": [
-      // `Dockerfile-xxx`, `Dockerfile.xxx`, `dockerfile-xxx` or `dockerfile.xxx`
-      "(^|/)[Dd]ockerfile[-.][^/]*$",
-      // `xxx-Dockerfile`, `xxx.Dockerfile`, `xxx-dockerfile` or `xxx.dockerfile`
-      "(^|/)[^/]*[-.][Dd]ockerfile$",
-      // `Dockerfile` or `dockerfile`
-      "(^|/)[Dd]ockerfile$"
-    ]
-  }
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        // `Dockerfile-xxx`, `Dockerfile.xxx`, `dockerfile-xxx` or `dockerfile.xxx`
+        "(^|/)[Dd]ockerfile[-.][^/]*$",
+        // `xxx-Dockerfile`, `xxx.Dockerfile`, `xxx-dockerfile` or `xxx.dockerfile`
+        "(^|/)[^/]*[-.][Dd]ockerfile$",
+      ],
+      "matchStrings": [
+        "FROM\\s+(?<depName>[^\\s:@]+)(?::(?<currentValue>[^@\\s]+))?(?:@(?<currentDigest>sha256:[a-f0-9]+))?"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "pinDigests": true
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
