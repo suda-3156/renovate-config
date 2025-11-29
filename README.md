@@ -4,16 +4,19 @@
 
 - `.github/renovate.json`
 
-```json5
+```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>suda-3156/renovate-config",
-    "github>suda-3156/renovate-config:anytime", // To run renovate at any time
-    "github>suda-3156/renovate-config:ignore-test" // To enable automerging for 'minor', 'patch', 'pin', 'digest' without tests
+    "github>suda-3156/renovate-config:anytime",
+    "github>suda-3156/renovate-config:ignore-test"
   ]
 }
 ```
+
+- `anytime`: Run Renovate at any time
+- `ignore-test`: Enable automerging for minor, patch, pin, or digest updates without requiring tests
 
 ## References
 
