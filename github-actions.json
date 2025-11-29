@@ -3,14 +3,12 @@
   "packageRules": [
     {
       "matchDepTypes": ["action"],
-      "matchPackageNames": ["!actions/{/,}**"],
       "pinDigests": true
     },
     {
       "matchDepTypes": ["action"],
-      "matchUpdateTypes": ["pin"],
-      "automerge": true,
-      "automergeType": "pr"
+      "matchUpdateTypes": ["pin", "digest"],
+      "automerge": true
     }
   ]
 }
