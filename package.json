@@ -1,7 +1,7 @@
 {
   "name": "renovate-config",
   "scripts": {
-    "validate": "renovate-config-validator"
+    "validate": "for file in *.json*; do if [[ \"$file\" == \"package.json\" ]]; then continue; fi; echo \"Validate: $file\"; RENOVATE_CONFIG_FILE=$file renovate-config-validator || exit 1; done"
   },
   "packageManager": "pnpm@10.23.0",
   "devDependencies": {
