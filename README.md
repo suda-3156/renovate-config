@@ -16,7 +16,7 @@
 ```
 
 - `anytime`: Run Renovate at any time
-- `ignore-test`: Enable automerging for minor, patch, pin, or digest updates without requiring tests
+- `ignore-test.json5`: Enable automerging for minor, patch, pin, pinDigest, or digest updates without requiring tests
 
 ## References
 
