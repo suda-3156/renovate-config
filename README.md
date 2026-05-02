@@ -9,13 +9,15 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>suda-3156/renovate-config",
-    "github>suda-3156/renovate-config:anytime",
     "github>suda-3156/renovate-config:ignore-test.json5"
+  ],
+  "schedule": [
+    "after 10:00 before 23:00"
   ]
 }
 ```
 
-- `anytime`: Run Renovate at any time
+- ~~`anytime`: Run Renovate at any time~~ Now, by default it runs anytime. Set up schedule in each config file if needed
 - `ignore-test.json5`: Enable automerging for minor, patch, pin, pinDigest, or digest updates without requiring tests
 
 ## References

@@ -13,9 +13,7 @@
     ":semanticPrefixFixDepsChoreOthers",
     ":timezone(Asia/Tokyo)"
   ],
-  "schedule": [
-    "after 10:00 before 23:00"
-  ],
+  "schedule": "at any time",
 
   // ["auto", "pin", "bump", "replace", "widen", "update-lockfile", "in-range-only"]
   // "rangeStrategy": "pin",
@@ -26,7 +24,6 @@
   // PR Settings
   "prHourlyLimit": 5,
   "prConcurrentLimit": 10,
-  "prCreation": "not-pending",
   "configMigration": true,
   "rollbackPrs": true,
   "addLabels": ["renovate"],
@@ -46,7 +43,7 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest", "digest"],
       "automerge": true,
-      // By default, Renovate will not automerge until it sees passing status checks / check runs for the branch. 
+      // By default, Renovate will not automerge until it sees passing status checks / check runs for the branch.
       // "ignoreTests": true
     }
   ],
