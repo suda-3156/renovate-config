@@ -3,7 +3,7 @@
   "scripts": {
     "validate": "for file in *.json*; do if [[ \"$file\" == \"package.json\" ]]; then continue; fi; echo \"Validate: $file\"; RENOVATE_CONFIG_FILE=$file renovate-config-validator || exit 1; done"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.21.0",
   "devDependencies": {
     "renovate": "^44.17.5"
   }
