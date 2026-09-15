@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       renovate:
-        specifier: ^44.82.4
-        version: 44.82.4(supports-color@7.2.0)(typanion@3.14.0)
+        specifier: ^44.82.5
+        version: 44.89.1(supports-color@7.2.0)(typanion@3.14.0)
 
 packages:
 
@@ -1651,8 +1651,8 @@ packages:
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
     hasBin: true
 
-  node-html-parser@9.0.3:
-    resolution: {integrity: sha512-iaQ9rokcYNp99IY0h82q04Wtc27SObRT+OEytdJh0bFv2IN0fypnU63KUNVavkPSiwsmIELG1eUenajGhzrvpg==}
+  node-html-parser@9.0.4:
+    resolution: {integrity: sha512-reUSrZkF1rO7hEYe5mJwtbVcQ6mB5QrViCZH6Wv+iz3er/PA9Q50gol15dMLQRDfdli4VzqPMPR24HNRFgVKFw==}
 
   nopt@10.0.1:
     resolution: {integrity: sha512-df3sBr/6ax9hSGuC3CspvLlbnX8cP5L5nZwXF8cGN8l0zSWR6BvzmQ6jPUKjvo6+/xdpkNvEcucBNUdBeeV13g==}
@@ -1859,8 +1859,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@44.82.4:
-    resolution: {integrity: sha512-EwhYNb7kfGEIUe/Mm6zQBs2xpCdMKMYCvc5qLRam45bdOcC0GbVahU45MKiftfPR5/5Jyg4oMh63KYa8zEr2Kg==}
+  renovate@44.89.1:
+    resolution: {integrity: sha512-l6UgNOuvpDdW8TUq+J6r05Yd9ystPNyK2aPJHMTUmQQNWVu6ejyk+OI1Vm6onK8nKG1L8sqoCcchibk+ur2Hiw==}
     engines: {node: ^24.11.0, pnpm: ^11.0.0}
     hasBin: true
 
@@ -4272,7 +4272,7 @@ snapshots:
       which: 7.0.0
     optional: true
 
-  node-html-parser@9.0.3:
+  node-html-parser@9.0.4:
     dependencies:
       css-select: 5.2.2
       entities: 8.1.0
@@ -4488,7 +4488,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@44.82.4(supports-color@7.2.0)(typanion@3.14.0):
+  renovate@44.89.1(supports-color@7.2.0)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1117.0
       '@aws-sdk/client-ec2': 3.1117.0
@@ -4581,7 +4581,7 @@ snapshots:
       moo: 0.5.3
       ms: 2.1.3
       neotraverse: 1.0.1
-      node-html-parser: 9.0.3
+      node-html-parser: 9.0.4
       p-all: 5.0.1
       p-map: 7.0.7
       p-queue: 9.3.3
