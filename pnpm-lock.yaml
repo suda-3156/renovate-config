@@ -167,7 +167,7 @@ importers:
   .:
     devDependencies:
       renovate:
-        specifier: ^44.103.7
+        specifier: ^44.106.0
         version: 44.106.0(supports-color@7.2.0)(typanion@3.14.0)
 
 packages:
