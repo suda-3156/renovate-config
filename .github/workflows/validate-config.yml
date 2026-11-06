@@ -5,33 +5,16 @@ on:
   push:
     branches: main
 
-env:
-  CACHE_DIR: /tmp/.npm-cache
-
 jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      CI: true
-
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
-          node-version: 26.x
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
-        with:
-          path: ${{ env.CACHE_DIR }}
-          key: ${{ runner.os }}-node
+          persist-credentials: false
+      # mise.toml is the source of tool versions.
+      - uses: jdx/mise-action@f5be966e4a917d54244728e6a5fdcd1d93a35e6c # v5.2.6
+      - run: pnpm install --frozen-lockfile
       - name: Validate renovate config
-        run: |
-          for file in *.json*
-          do
-            if [[ "$file" == "package.json" || "$file" == "renovate.json" ]]; then
-              echo "Skip: $file"
-              continue
-            fi
-            echo "Validate: $file"
-            RENOVATE_CONFIG_FILE=${file} npx --package renovate -c 'renovate-config-validator'
-          done
+        run: pnpm validate
