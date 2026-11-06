@@ -4,6 +4,6 @@
     "validate": "for file in *.json*; do if [[ \"$file\" == \"package.json\" ]]; then continue; fi; echo \"Validate: $file\"; RENOVATE_CONFIG_FILE=$file renovate-config-validator || exit 1; done"
   },
   "devDependencies": {
-    "renovate": "^44.206.3"
+    "renovate": "^44.209.0"
   }
 }
