@@ -1,0 +1,10 @@
+// Keep a tool's version in mise.toml and its container image in one PR.
+// Extend this in repositories that check the two agree, where separate PRs
+// would each fail the check and never automerge.
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    { "groupName": "go toolchain", "matchDepNames": ["go", "golang"] },
+    { "groupName": "bun", "matchDepNames": ["bun", "oven/bun"] }
+  ]
+}
