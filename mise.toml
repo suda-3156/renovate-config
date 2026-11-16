@@ -1,4 +1,4 @@
 [tools]
 jactionlint = "2.6.0"
 node = "26.13.1"
-"npm:pnpm" = "12.20.0"
+"npm:pnpm" = "12.21.0"
